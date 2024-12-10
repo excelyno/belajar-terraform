@@ -4,6 +4,8 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+terraform/terraform-state-bucket/*.tfstate
+terraform/terraform-state-bucket/*.tfstate.*
 
 # Crash log files
 crash.log
@@ -27,3 +29,8 @@ terraform.rc
 *.json
 credentials.json
 service-account.json
+terraform/terraform-state-bucket/*.json
+
+# Ignore everything in terraform-state-bucket except main.tf
+terraform/terraform-state-bucket/*
+!terraform/terraform-state-bucket/main.tf
