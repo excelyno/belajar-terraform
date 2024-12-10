@@ -1,36 +1,36 @@
-# Local .terraform directories
-**/.terraform/*
+# Ignore all files and directories
+*
+!*/
 
-# .tfstate files
+# Don't ignore .tf files
+!*.tf
+
+# Ignore Terraform specific files and directories
+**/.terraform/*
 *.tfstate
 *.tfstate.*
-terraform/terraform-state-bucket/*.tfstate
-terraform/terraform-state-bucket/*.tfstate.*
+*.tfvars
+*.tfvars.json
+.terraformrc
+terraform.rc
 
-# Crash log files
+# Ignore crash logs
 crash.log
 crash.*.log
 
-# Exclude all .tfvars files, which are likely to contain sensitive data
-*.tfvars
-*.tfvars.json
-
-# Ignore override files as they are usually used for local dev
+# Ignore override files
 override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
 
-# Ignore CLI configuration files
-.terraformrc
-terraform.rc
-
-# Ignore any credentials or sensitive files
+# Ignore credentials and sensitive files
 *.json
 credentials.json
 service-account.json
-terraform/terraform-state-bucket/*.json
 
-# Ignore everything in terraform-state-bucket except main.tf
-terraform/terraform-state-bucket/*
-!terraform/terraform-state-bucket/main.tf
+# Keep track of .gitignore
+!.gitignore
+
+# Keep track of README if exists
+!README.md
