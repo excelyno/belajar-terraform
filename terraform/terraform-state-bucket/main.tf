@@ -1,7 +1,7 @@
 resource "google_storage_bucket" "tf_state_bucket"{
     project = "nasir-441404"
     name    = "excel-terraform-state"
-    location = "Asia-southeast1"
+    location = "asia-southeast1"
     force_destroy = true
 }
 
